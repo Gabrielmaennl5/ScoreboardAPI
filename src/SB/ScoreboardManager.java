@@ -31,22 +31,7 @@ public class ScoreboardManager extends JavaPlugin
 			SMPlayer smp = new SMPlayer(player);
 			SMHandler.addPlayer(smp);
 		}
-
-	    getServer().getScheduler().scheduleSyncRepeatingTask(this, new Runnable()
-		{
-			@Override
-		    public void run()
-		    {
-		    	for(Player all : Bukkit.getOnlinePlayers())
-		    	{
-		    		SMPlayer sm = SMHandler.getPlayer(all);
-		    		if(sm.hasBoard() == true)
-		    		{
-		    			sm.updateLine(sm.getStringLine("Health") - 1, "" + all.getHealth());
-		    		}
-		    	}
-		    }
-		},0L, 20L);
+		
 	}
 
 }
