@@ -1,0 +1,5 @@
+name: ScoreboardAPI
+main: SB.ScoreboardManager
+version: 1.3
+author: Gabrielmaennl5
+description: Scoreboard API to use with other plugins!
